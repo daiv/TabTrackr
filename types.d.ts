@@ -1,0 +1,15 @@
+export interface Visit {
+  id?: number,
+  site: string,
+  timeSpent: number,
+  createdAt?: Date
+}
+
+export interface ButtonProps {
+  selectedPeriod: string,
+  setSelectedPeriod: (string) => void
+}
+  
+export interface TabListProps {
+  tabs: Visit[]
+}

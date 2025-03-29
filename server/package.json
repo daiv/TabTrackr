@@ -1,10 +1,11 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsc && VITE_ENV=dev nodemon ./dist/server.js",
+    "test": "tsc && VITE_ENV=test vitest --dir ./dist/controller"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,14 @@
     "nodemon": "^3.1.9",
     "pg": "^8.13.3",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.37.5"
+    "sequelize": "^6.37.5",
+    "supertest": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.9",
+    "dotenv-cli": "^8.0.0",
+    "vitest": "^3.0.8"
   }
 }
